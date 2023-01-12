@@ -1,0 +1,45 @@
+{% extends 'home/layout.html' %}
+{% block title %} {{ title }} {% endblock %}
+{% block content %}
+<div class="formktp">
+	{% include "includes/alert.html" %}
+    <h1>Daftar</h1>
+    <div class="links">
+        <a href="{{ url_for('formktp') }}" class="active">Buat KTP</a>
+        <a href="{{ url_for('formktp') }}">Pembaruan KTP</a>
+    </div>
+   
+    <form action="{{ url_for('formktp') }}" method="post" autocomplete="off">
+        <h1> Lengkapi data dibawah </h1>
+        <input type="text" name="nik" placeholder="NIK" id="nik" required>
+        </b></b>
+
+        <input type="text" name="nokk" placeholder="Nomor KK" id="nokk" required>
+        </b></b>
+
+        <input type="text" name="nama" placeholder="Nama Lengkap" id="nama" required>
+        </b></b>
+
+        <input type="text" name="tempat" placeholder="Tempat Lahir" id="tempat" required>
+        </b></b>
+
+        <input type="date" name="tanggal" placeholder="Tanggal Lahir" id="tanggal" required>
+        </b></b>
+
+        <input type="text" name="alamat" placeholder="Alamat" id="alamat" required>
+        </b></b>
+        
+        <input type="text" name="status" placeholder="Status Perkawinan" id="status" required>
+        </b></b>
+        
+        <input type="text" name="pekerjaan" placeholder="Pekerjaan" id="pekerjaan" required>
+        </b></b>
+        
+        <input type="text" name="kewarganegaraan" placeholder="Kewarganegaraan" id="kewarganegaraan" required>
+        </b></b>
+        
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

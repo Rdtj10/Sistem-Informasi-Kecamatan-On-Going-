@@ -1,0 +1,112 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+<p>Welcome back, {{ nama }}!</p>
+<body>
+    <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <div class="small-box bg-green">
+            <div class="inner">
+              Form Daftar KTP
+            </div>
+            <div class="icon">
+                 <i class="ion ion-person-add"></i>
+            </div>
+          </div>
+          <a href="{{ url_for('formktp') }}" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>Forum Pengaduan<sup style="font-size: 20px"></sup></h3>
+            </div>
+            <div class="icon">
+                  <i class="ion ion-person-add"></i>
+            </div>
+            <a href="{{ url_for('pengajuan') }}" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>Pengajuan Fasilitas</h3>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="datang_tampil.php" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>Kritik dan Saran</h3>
+            </div>
+            <div class="icon">
+                  <i class="ion ion-person-add"></i>
+            </div>
+            <a href="{{ url_for('pengajuan') }}" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+
+      
+        <!--<div class="row">
+        <div class="col-lg-3 col-xs-6">-->
+          <!-- small box -->
+          <!--<div class="small-box bg-aqua">
+            <div class="inner">
+              <h3>Penduduk Tetap</h3>
+            </div>
+            <div class="icon">
+                 <i class="ion ion-person-add"></i>
+            </div>
+            <a href="tetap_add.php" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>Total Penduduk<sup style="font-size: 20px"></sup></h3>
+            </div>
+            <div class="icon">
+                  <i class="ion ion-person-add"></i>
+            </div>
+            <a href="penduduk_tampil.php" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>Total User</h3>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="user_add.php" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>Total Lurah / Desa</h3>
+            </div>
+            <div class="icon">
+                  <i class="ion ion-person-add"></i>
+            </div>
+            <a href="lurah_add.php" class="small-box-footer">Lihat <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </div>-->
+      
+    </section>
+  </div>
+</body>
+{% endblock %}

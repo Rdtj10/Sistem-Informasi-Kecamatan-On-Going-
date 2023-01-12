@@ -1,0 +1,43 @@
+{% extends 'auth/auth_layout.html' %}
+{% block title %} {{ title }} {% endblock %}
+{% block content%}
+
+<div class="daftar">
+	{% include "includes/alert.html" %}
+    <h1>Daftar</h1>
+    <div class="links">
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('daftar') }}" class="active">Daftar</a>
+    </div>
+   
+    <form action="{{ url_for('daftar') }}" method="post" autocomplete="off">
+        <h1> Lengkapi data dibawah </h1>
+        <input type="text" name="nik" placeholder="NIK" id="nik" required>
+        </b></b>
+
+        <input type="text" name="nama" placeholder="Nama Lengkap" id="nama" required>
+        </b></b>
+
+        <input type="email" name="email" placeholder="Email" id="email" required>
+        </b></b>
+
+        <input type="password" name="password" placeholder="Password" id="password" required>
+        </b></b>
+
+        <input type="password" name="confirmPass" placeholder="Konfirmasi Password" id="confirmPass" required>
+        </b></b>
+        
+        <input type="text" name="phone" placeholder="Nomor Telepon" id="phone" required>
+        </b></b>
+        
+        <input type="text" name="sex" placeholder="Jenis Kelamin" id="sex" required>
+        </b></b>
+        
+        <input type="text" name="address" placeholder="Alamat" id="address" required>
+        </b></b>
+        
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Daftar">
+    </form>
+</div>
+{% endblock %}

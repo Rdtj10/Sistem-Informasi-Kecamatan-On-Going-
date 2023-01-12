@@ -1,0 +1,18 @@
+{% extends 'home/layout.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<h2>Saran dan Kritik</h2>
+<div class="pengaduan">
+    <h2>Saran dan Kritik</h2>
+    <a>Tulis Disini</a></b>
+    <form action="{{ url_for('saran') }}" method="post" autocomplete="off">
+        <input type="text" name="teks" placeholder="Tuliskan Sesuatu" id="teks" required>
+        </b></b>
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Pengaduan">
+    </form>
+</div>
+</b></b>
+{% endblock %}
